@@ -47,7 +47,13 @@
 <br/>
 <br/>
 <div align="center">
-<img width="100%" src="https://raw.githubusercontent.com/somenpradhan/somenpradhan/projects/projects.svg" alt="Projects" />
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/somenpradhan/somenpradhan/projects/projects.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/somenpradhan/somenpradhan/projects/projects-light.svg">
+  <img width="100%" src="https://raw.githubusercontent.com/somenpradhan/somenpradhan/projects/projects.svg" alt="Projects" />
+</picture>
+
 </div>
 
 <!-- ===== SOCIAL BADGES ===== -->

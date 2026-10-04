@@ -3,11 +3,6 @@ name: Generate Projects Panel
 on:
   push:
     branches: [main]
-    paths:
-      - "projects.json"
-      - "logos/**"
-      - ".github/scripts/generate_projects.py"
-      - ".github/scripts/fetch_data.py"
   schedule:
     - cron: "0 */6 * * *"
   workflow_dispatch:
