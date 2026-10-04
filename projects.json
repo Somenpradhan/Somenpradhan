@@ -1,0 +1,98 @@
+[
+  {
+    "id": "omni-ai-assistant",
+    "name": "Omni AI Assistant",
+    "description": "Production-ready Multi-Agent AI Assistant with RAG, real-time web search & LangGraph",
+    "tech": [
+      "Python",
+      "LangGraph",
+      "LangChain",
+      "FastAPI",
+      "Vector DB"
+    ],
+    "url": "https://github.com/Somenpradhan/Omni_AI_Assistant",
+    "logo": "logos/logo.png",
+    "stars": 12,
+    "forks": 3
+  },
+  {
+    "id": "ai-finance-copilot",
+    "name": "AI Finance Copilot",
+    "description": "AI-powered financial advisor & stock prediction platform tailored for the Indian NSE Market",
+    "tech": [
+      "TypeScript",
+      "React",
+      "Next.js",
+      "PostgreSQL",
+      "TailwindCSS"
+    ],
+    "url": "https://github.com/Somenpradhan/AI_Finance_Copilot",
+    "logo": "logos/onetele.png",
+    "stars": 8,
+    "forks": 2
+  },
+  {
+    "id": "transcribetube",
+    "name": "TranscribeTube",
+    "description": "Fast bot designed to extract transcripts and subtitles from YouTube videos in seconds",
+    "tech": [
+      "Python",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Docker"
+    ],
+    "url": "https://github.com/Somenpradhan/TranscribeTube",
+    "logo": "logos/cl.png",
+    "stars": 15,
+    "forks": 5
+  },
+  {
+    "id": "somen-portfolio",
+    "name": "My Portfolio",
+    "description": "Personal interactive portfolio showcasing full-stack & AI projects deployed on Render",
+    "tech": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "React",
+      "Python"
+    ],
+    "url": "https://somen-portfolio.onrender.com/",
+    "logo": "logos/op.png",
+    "stars": 20,
+    "forks": 4
+  },
+  {
+    "id": "chatbot-langgraph",
+    "name": "LangGraph AI Chatbot",
+    "description": "Modular AI chatbot with LangGraph, Streamlit & Ollama for local RAG, memory & streaming",
+    "tech": [
+      "Python",
+      "LangGraph",
+      "Streamlit",
+      "Ollama",
+      "RAG"
+    ],
+    "url": "https://github.com/Somenpradhan/Chatbot_Using_LangGraph",
+    "logo": "logos/chess.png",
+    "stars": 10,
+    "forks": 2
+  },
+  {
+    "id": "ecg-signal-classification",
+    "name": "ECG Signal Classification",
+    "description": "Lightweight CNN with Attention mechanism for heart sound & ECG signal classification",
+    "tech": [
+      "Python",
+      "Jupyter",
+      "CNN",
+      "TensorFlow",
+      "Deep Learning"
+    ],
+    "url": "https://github.com/Somenpradhan/ECG-Signal",
+    "logo": "logos/claster.png",
+    "stars": 8,
+    "forks": 1
+  }
+]
