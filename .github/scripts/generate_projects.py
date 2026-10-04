@@ -183,7 +183,7 @@ def card(p, x, y, idx):
       f'begin="{b+0.4:.2f}s" repeatCount="indefinite"/></tspan></text>')
 
     # description, wrapped to 2 lines
-    for i, line in enumerate(wrap_text(p.get("description", ""), 52)):
+    for i, line in enumerate(wrap_text(p.get("description", ""), 44)):
         a(f'<text x="68" y="{80 + i * 16}" font-size="11" fill="{MUTED}">{esc(line)}</text>')
 
     # tag pills (supports 'tags' or 'tech')
@@ -204,20 +204,21 @@ def card(p, x, y, idx):
     # language donut, animated draw-in — vertically centered in the card body
     langs = p.get("languages") or {}
     if langs:
-        cx, cy, r = CARD_W - 58, CARD_H // 2 + 6, 27
+        cx, cy, r = CARD_W - 48, CARD_H // 2 + 4, 25
         segs, legend = donut_segments(langs, cx, cy, r, b + 0.3)
-        a(f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="none" stroke="{RING_BG}" stroke-width="9"/>')
+        a(f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="none" stroke="{RING_BG}" stroke-width="8"/>')
         a(segs)
         top = legend[0]
-        a(f'<text x="{cx}" y="{cy+4}" text-anchor="middle" font-size="11" font-weight="700" fill="{TEXT}">{top[1]*100:.0f}%</text>')
-        # legend: fixed left column, dot then left-aligned text; ends well before the ring
-        dot_x = cx - r - 92
+        a(f'<text x="{cx}" y="{cy+4}" text-anchor="middle" font-size="10.5" font-weight="700" fill="{TEXT}">{top[1]*100:.0f}%</text>')
+        # legend: fixed left column, dot then left-aligned text; ends before the ring
+        dot_x = cx - r - 102
         text_x = dot_x + 9
-        ly = cy - 22
+        ly = cy - 20
         for lang, frac, col in legend[:3]:
+            display_lang = "Jupyter" if lang == "Jupyter Notebook" else lang
             a(f'<circle cx="{dot_x}" cy="{ly}" r="3.5" fill="{col}"/>')
-            a(f'<text x="{text_x}" y="{ly+4}" font-size="10" fill="{MUTED}">{esc(lang)} {frac*100:.0f}%</text>')
-            ly += 18
+            a(f'<text x="{text_x}" y="{ly+3.5}" font-size="9.5" fill="{MUTED}">{esc(display_lang)} {frac*100:.0f}%</text>')
+            ly += 17
     a('</g>')
     a('</a>')
     return "".join(e)

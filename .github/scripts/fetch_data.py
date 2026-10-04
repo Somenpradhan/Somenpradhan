@@ -28,9 +28,10 @@ def main():
         repo = repo.replace("https://github.com/", "").replace("http://github.com/", "").rstrip("/")
         p["repo"] = repo
         if not repo or ("http" in repo and "github.com" not in repo):
+            config_langs = p.get("languages", {})
             p.setdefault("stars", 0)
-            p.setdefault("languages", {})
             p.setdefault("pushed_at", None)
+            p["languages"] = config_langs
             continue
         try:
             info = gh(f"https://api.github.com/repos/{repo}")
@@ -38,12 +39,21 @@ def main():
             p["pushed_at"] = info.get("pushed_at")
             if not p.get("description"):
                 p["description"] = info.get("description") or ""
-            p["languages"] = gh(f"https://api.github.com/repos/{repo}/languages")
+            live_langs = gh(f"https://api.github.com/repos/{repo}/languages")
+            if live_langs:
+                cleaned = {}
+                for k, v in live_langs.items():
+                    name = "Jupyter" if k == "Jupyter Notebook" else k
+                    cleaned[name] = v
+                p["languages"] = cleaned
+            elif not p.get("languages"):
+                p["languages"] = {}
         except Exception as e:
             print(f"warn: could not fetch {repo}: {e}", file=sys.stderr)
             p.setdefault("stars", 0)
-            p.setdefault("languages", {})
             p.setdefault("pushed_at", None)
+            if not p.get("languages"):
+                p["languages"] = {}
     with open("merged.json", "w") as f:
         json.dump(projects, f)
     print(f"merged {len(projects)} projects")

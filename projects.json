@@ -13,7 +13,12 @@
     "url": "https://github.com/Somenpradhan/Omni_AI_Assistant",
     "logo": "logos/logo.png",
     "stars": 12,
-    "forks": 3
+    "forks": 3,
+    "languages": {
+      "Python": 65,
+      "LangChain": 25,
+      "FastAPI": 10
+    }
   },
   {
     "id": "ai-finance-copilot",
@@ -29,7 +34,12 @@
     "url": "https://github.com/Somenpradhan/AI_Finance_Copilot",
     "logo": "logos/onetele.png",
     "stars": 8,
-    "forks": 2
+    "forks": 2,
+    "languages": {
+      "TypeScript": 52,
+      "React": 30,
+      "Next.js": 18
+    }
   },
   {
     "id": "transcribetube",
@@ -45,7 +55,12 @@
     "url": "https://github.com/Somenpradhan/TranscribeTube",
     "logo": "logos/cl.png",
     "stars": 15,
-    "forks": 5
+    "forks": 5,
+    "languages": {
+      "Python": 55,
+      "JavaScript": 30,
+      "HTML": 15
+    }
   },
   {
     "id": "somen-portfolio",
@@ -61,7 +76,12 @@
     "url": "https://somen-portfolio.onrender.com/",
     "logo": "logos/op.png",
     "stars": 20,
-    "forks": 4
+    "forks": 4,
+    "languages": {
+      "JavaScript": 48,
+      "CSS": 28,
+      "HTML": 24
+    }
   },
   {
     "id": "chatbot-langgraph",
@@ -77,7 +97,12 @@
     "url": "https://github.com/Somenpradhan/Chatbot_Using_LangGraph",
     "logo": "logos/chess.png",
     "stars": 10,
-    "forks": 2
+    "forks": 2,
+    "languages": {
+      "Python": 78,
+      "Streamlit": 15,
+      "Shell": 7
+    }
   },
   {
     "id": "ecg-signal-classification",
@@ -93,6 +118,10 @@
     "url": "https://github.com/Somenpradhan/ECG-Signal",
     "logo": "logos/claster.png",
     "stars": 8,
-    "forks": 1
+    "forks": 1,
+    "languages": {
+      "Python": 70,
+      "Jupyter": 30
+    }
   }
 ]
